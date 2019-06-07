@@ -17,6 +17,13 @@ Route::get('/cliente/cadastrar', function () {
     return view('cliente.cadastrar', compact('nome', 'idade'));
 });
 
+Route::get('/blade', function () {
+    $nome = 'Nicolas';
+    $idade = 20;
+    $test = 'Vagina peluda';
+    return view('test', compact('nome', 'idade', 'test'));
+});
+
 
 /*
 //Passando parametros - parametro opcional
