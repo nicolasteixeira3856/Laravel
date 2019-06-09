@@ -3,29 +3,50 @@
 use Illuminate\Http\Request;
 
 //MVC - Model, view, controller.
+//StudlyCaps
 
 Route::get('/', function () {
     return view('welcome'); //Helper
+    
 });
 
+//Agrupamento de rotas -> Área aberta / Área admin
+Route::group(['prefix' => '/'], function(){
+    Route::get('/cliente/cadastrar', 'ClientsController@cadastrar');
+    Route::get('/for-if/{value}', function($value){
+        $myarray = array('Valor1', 'Valor2', 'Valor3');
+        return view('for-if', compact('value', 'myarray'));
+    });
+    Route::get('/blade', function () {
+        $nome = 'Nicolas';
+        $idade = 20;
+        $test = 'Teste';
+        return view('test', compact('nome', 'idade', 'test'));
+    });
+    Route::get('/env', function () {
+        var_dump(env("NOME", 'xpto'));
+    });
+});
+
+Route::group(['prefix' => 'admin'], function(){
+    Route::group(['prefix' => '/cliente'], function(){
+        Route::get('/cadastrar', 'ClientsController@cadastrar');
+        
+    });
+});
+
+
+
+/*
 Route::get('/cliente/cadastrar', function () {
     $nome = 'Nicolas';
     $idade = 20;
     /*return view('cadastrar', [
         'nome' => 'Nicolas'
-    ]);*/
+    ]);
     return view('cliente.cadastrar', compact('nome', 'idade'));
 });
 
-Route::get('/blade', function () {
-    $nome = 'Nicolas';
-    $idade = 20;
-    $test = 'Vagina peluda';
-    return view('test', compact('nome', 'idade', 'test'));
-});
-
-
-/*
 //Passando parametros - parametro opcional
 Route::get('/cliente', function () {
 //CSRF Token
