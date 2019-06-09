@@ -29,10 +29,22 @@ Route::group(['prefix' => '/'], function(){
 });
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::group(['prefix' => '/cliente'], function(){
+    Route::get('/client', 'ClientsController@listar');
+    Route::get('/client/form-cadastrar', 'ClientsController@formCadastrar');
+    Route::post('/client/cadastrar', 'ClientsController@cadastrar');
+    Route::get('/client/{id}/form-editar', 'ClientsController@formEditar');
+    Route::post('/client/{id}/editar', 'ClientsController@editar');
+    Route::get('/client/{id}/excluir', 'ClientsController@excluir');
+
+
+
+
+
+
+
+    /*Route::group(['prefix' => '/cliente'], function(){
         Route::get('/cadastrar', 'ClientsController@cadastrar');
-        
-    });
+    });*/
 });
 
 

@@ -1,1 +1,0 @@
-<?php echo $nome; echo $idade;  ?>
