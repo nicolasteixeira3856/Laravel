@@ -1,0 +1,115 @@
+Encryption keys generated successfully.
+Personal access client created successfully.
+Client ID: 1
+Client secret: c74SCitSqXLCgD9t9Z1c3rJ7j5zysp1bCXujDLcm
+Password grant client created successfully.
+Client ID: 2
+Client secret: rO0YdHfX5soJDJIErc4WS6ZxLEVQf8y4ahq41Mpu
+
+///////////////////
+
+
+c:\projetos\Laravel\laravel-api-restful>php artisan make:model Product -mc
+Model created successfully.
+Created Migration: 2019_06_12_231242_create_products_table
+Controller created successfully.
+
+c:\projetos\Laravel\laravel-api-restful>php artisan migrate
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+
+   Illuminate\Database\QueryException  : SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`))
+
+  at C:\projetos\Laravel\laravel-api-restful\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes")
+      C:\projetos\Laravel\laravel-api-restful\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      C:\projetos\Laravel\laravel-api-restful\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+c:\projetos\Laravel\laravel-api-restful>php artisan migrate
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table
+Migrating: 2019_06_12_231242_create_products_table
+Migrated:  2019_06_12_231242_create_products_table
+
+c:\projetos\Laravel\laravel-api-restful>php artisan make:controller --resource UsersController
+Controller created successfully.
+
+c:\projetos\Laravel\laravel-api-restful>php artisan make:request ProductsRequest
+Request created successfully.
+
+c:\projetos\Laravel\laravel-api-restful>composer require laravel/passport
+Using version ^7.3 for laravel/passport
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 15 installs, 0 updates, 0 removals
+  - Installing psr/http-message (1.0.1): Loading from cache
+  - Installing psr/http-factory (1.0.1): Loading from cache
+  - Installing zendframework/zend-diactoros (2.1.2): Downloading (100%)
+  - Installing symfony/psr-http-message-bridge (v1.2.0): Downloading (100%)
+  - Installing phpseclib/phpseclib (2.0.17): Downloading (100%)
+  - Installing defuse/php-encryption (v2.2.1): Downloading (100%)
+  - Installing lcobucci/jwt (3.3.1): Downloading (100%)
+  - Installing league/event (2.2.0): Downloading (100%)
+  - Installing league/oauth2-server (7.4.0): Downloading (100%)
+  - Installing ralouphie/getallheaders (2.0.5): Loading from cache
+  - Installing guzzlehttp/psr7 (1.5.2): Loading from cache
+  - Installing guzzlehttp/promises (v1.3.1): Loading from cache
+  - Installing guzzlehttp/guzzle (6.3.3): Loading from cache
+  - Installing firebase/php-jwt (v5.0.0): Loading from cache
+  - Installing laravel/passport (v7.3.0): Downloading (100%)
+symfony/psr-http-message-bridge suggests installing nyholm/psr7 (For a super lightweight PSR-7/17 implementation)
+phpseclib/phpseclib suggests installing ext-libsodium (SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.)
+phpseclib/phpseclib suggests installing ext-mcrypt (Install the Mcrypt extension in order to speed up a few other cryptographic operations.)
+phpseclib/phpseclib suggests installing ext-gmp (Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.)
+Writing lock file
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+Discovered Package: beyondcode/laravel-dump-server
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/passport
+Discovered Package: laravel/tinker
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+
+c:\projetos\Laravel\laravel-api-restful>php artisan migrate
+Migrating: 2016_06_01_000001_create_oauth_auth_codes_table
+Migrated:  2016_06_01_000001_create_oauth_auth_codes_table
+Migrating: 2016_06_01_000002_create_oauth_access_tokens_table
+Migrated:  2016_06_01_000002_create_oauth_access_tokens_table
+Migrating: 2016_06_01_000003_create_oauth_refresh_tokens_table
+Migrated:  2016_06_01_000003_create_oauth_refresh_tokens_table
+Migrating: 2016_06_01_000004_create_oauth_clients_table
+Migrated:  2016_06_01_000004_create_oauth_clients_table
+Migrating: 2016_06_01_000005_create_oauth_personal_access_clients_table
+Migrated:  2016_06_01_000005_create_oauth_personal_access_clients_table
+
+c:\projetos\Laravel\laravel-api-restful>php artisan passport:install
+Encryption keys generated successfully.
+Personal access client created successfully.
+Client ID: 1
+Client secret: c74SCitSqXLCgD9t9Z1c3rJ7j5zysp1bCXujDLcm
+Password grant client created successfully.
+Client ID: 2
+Client secret: rO0YdHfX5soJDJIErc4WS6ZxLEVQf8y4ahq41Mpu
