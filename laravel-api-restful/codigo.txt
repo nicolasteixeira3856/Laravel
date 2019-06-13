@@ -5,7 +5,11 @@ Client secret: c74SCitSqXLCgD9t9Z1c3rJ7j5zysp1bCXujDLcm
 Password grant client created successfully.
 Client ID: 2
 Client secret: rO0YdHfX5soJDJIErc4WS6ZxLEVQf8y4ahq41Mpu
+Client ID: 3
+Client secret: N95qO8qjzpfcWcJvELm7PQX2FHhzu8SzjUBvPGG0
 
+
+http://localhost:8000/oauth/authorize?client_id=3&responde_type=token&scope=&redirect_uri=http://meusite.com/pagina-de-login
 ///////////////////
 
 

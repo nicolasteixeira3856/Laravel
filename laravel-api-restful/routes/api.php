@@ -17,11 +17,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['prefix' => 'v1'], function () {
+Route::middleware('auth:api')->prefix('v1')->group(function () {
+    Route::get('/users/me', function () {
+        return request()->user();
+    });
     Route::resources([
             'products' => 'ProductController',
             'users' => 'UsersController'
         ]);
+});
+
+Route::get('cors_example', function () {
+    return ['status'=> 'ok'];
 });
 
 /*Route::get('products', 'ProductController@index');
