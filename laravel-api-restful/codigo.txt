@@ -117,3 +117,284 @@ Client secret: c74SCitSqXLCgD9t9Z1c3rJ7j5zysp1bCXujDLcm
 Password grant client created successfully.
 Client ID: 2
 Client secret: rO0YdHfX5soJDJIErc4WS6ZxLEVQf8y4ahq41Mpu
+
+Microsoft Windows [versão 10.0.17763.557]
+(c) 2018 Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\nicol>cd c:/projetos/Laravel/laravel-api-restful
+
+c:\projetos\Laravel\laravel-api-restful>php artisan vendor:publish --tag=passport-components
+Copied Directory [\vendor\laravel\passport\resources\js\components] To [\resources\js\components\passport]
+Publishing complete.
+
+c:\projetos\Laravel\laravel-api-restful>npm install
+npm ERR! path c:\projetos\Laravel\laravel-api-restful\node_modules\resolve-from\package.json.2508972488
+npm ERR! code EPERM
+npm ERR! errno -4048
+npm ERR! syscall rename
+npm ERR! Error: EPERM: operation not permitted, rename 'c:\projetos\Laravel\laravel-api-restful\node_modules\resolve-from\package.json.2508972488' -> 'c:\projetos\Laravel\laravel-api-restful\node_modules\resolve-from\package.json'
+npm ERR!  { [Error: EPERM: operation not permitted, rename 'c:\projetos\Laravel\laravel-api-restful\node_modules\resolve-from\package.json.2508972488' -> 'c:\projetos\Laravel\laravel-api-restful\node_modules\resolve-from\package.json']
+npm ERR!   cause:
+npm ERR!    { Error: EPERM: operation not permitted, rename 'c:\projetos\Laravel\laravel-api-restful\node_modules\resolve-from\package.json.2508972488' -> 'c:\projetos\Laravel\laravel-api-restful\node_modules\resolve-from\package.json'
+npm ERR!      errno: -4048,
+npm ERR!      code: 'EPERM',
+npm ERR!      syscall: 'rename',
+npm ERR!      path:
+npm ERR!       'c:\\projetos\\Laravel\\laravel-api-restful\\node_modules\\resolve-from\\package.json.2508972488',
+npm ERR!      dest:
+npm ERR!       'c:\\projetos\\Laravel\\laravel-api-restful\\node_modules\\resolve-from\\package.json' },
+npm ERR!   stack:
+npm ERR!    'Error: EPERM: operation not permitted, rename \'c:\\projetos\\Laravel\\laravel-api-restful\\node_modules\\resolve-from\\package.json.2508972488\' -> \'c:\\projetos\\Laravel\\laravel-api-restful\\node_modules\\resolve-from\\package.json\'',
+npm ERR!   errno: -4048,
+npm ERR!   code: 'EPERM',
+npm ERR!   syscall: 'rename',
+npm ERR!   path:
+npm ERR!    'c:\\projetos\\Laravel\\laravel-api-restful\\node_modules\\resolve-from\\package.json.2508972488',
+npm ERR!   dest:
+npm ERR!    'c:\\projetos\\Laravel\\laravel-api-restful\\node_modules\\resolve-from\\package.json' }
+npm ERR!
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It's possible that the file was already in use (by a text editor or antivirus),
+npm ERR! or that you lack permissions to access it.
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator (though this is not recommended).
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\nicol\AppData\Roaming\npm-cache\_logs\2019-06-13T12_29_27_444Z-debug.log
+
+c:\projetos\Laravel\laravel-api-restful>php artisan make:auth
+Authentication scaffolding generated successfully.
+
+c:\projetos\Laravel\laravel-api-restful>php artisan passport
+
+
+  Command "passport" is not defined.
+
+  Did you mean one of these?
+      passport:client
+      passport:install
+      passport:keys
+
+
+
+c:\projetos\Laravel\laravel-api-restful>php artisan passport:client --password
+
+ What should we name the password grant client? [Laravel Password Grant Client]:
+ >
+
+Password grant client created successfully.
+Client ID: 3
+Client secret: N95qO8qjzpfcWcJvELm7PQX2FHhzu8SzjUBvPGG0
+
+c:\projetos\Laravel\laravel-api-restful>php artisan migrate:refresh
+Rolling back: 2016_06_01_000005_create_oauth_personal_access_clients_table
+Rolled back:  2016_06_01_000005_create_oauth_personal_access_clients_table
+Rolling back: 2016_06_01_000004_create_oauth_clients_table
+Rolled back:  2016_06_01_000004_create_oauth_clients_table
+Rolling back: 2016_06_01_000003_create_oauth_refresh_tokens_table
+Rolled back:  2016_06_01_000003_create_oauth_refresh_tokens_table
+Rolling back: 2016_06_01_000002_create_oauth_access_tokens_table
+Rolled back:  2016_06_01_000002_create_oauth_access_tokens_table
+Rolling back: 2016_06_01_000001_create_oauth_auth_codes_table
+Rolled back:  2016_06_01_000001_create_oauth_auth_codes_table
+Rolling back: 2019_06_12_231242_create_products_table
+Rolled back:  2019_06_12_231242_create_products_table
+Rolling back: 2014_10_12_100000_create_password_resets_table
+Rolled back:  2014_10_12_100000_create_password_resets_table
+Rolling back: 2014_10_12_000000_create_users_table
+Rolled back:  2014_10_12_000000_create_users_table
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table
+Migrating: 2016_06_01_000001_create_oauth_auth_codes_table
+Migrated:  2016_06_01_000001_create_oauth_auth_codes_table
+Migrating: 2016_06_01_000002_create_oauth_access_tokens_table
+Migrated:  2016_06_01_000002_create_oauth_access_tokens_table
+Migrating: 2016_06_01_000003_create_oauth_refresh_tokens_table
+Migrated:  2016_06_01_000003_create_oauth_refresh_tokens_table
+Migrating: 2016_06_01_000004_create_oauth_clients_table
+Migrated:  2016_06_01_000004_create_oauth_clients_table
+Migrating: 2016_06_01_000005_create_oauth_personal_access_clients_table
+Migrated:  2016_06_01_000005_create_oauth_personal_access_clients_table
+Migrating: 2019_06_12_231242_create_products_table
+Migrated:  2019_06_12_231242_create_products_table
+
+c:\projetos\Laravel\laravel-api-restful>php artisan passport:install
+Encryption keys already exist. Use the --force option to overwrite them.
+Personal access client created successfully.
+Client ID: 2
+Client secret: MQaGaKWDwrLt9ww1rArHLVVpsDvF8IivYgqfO4Ag
+Password grant client created successfully.
+Client ID: 3
+Client secret: 66YDZTxbLN37BG2cyZSXmPx9m9hnSGW0GED4uLnY
+
+c:\projetos\Laravel\laravel-api-restful>php artisan make:policy ProductPolicy --model=Product
+Policy created successfully.
+
+c:\projetos\Laravel\laravel-api-restful>composer require barryvdh/laravel-cors
+Using version ^0.11.3 for barryvdh/laravel-cors
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 2 installs, 0 updates, 0 removals
+  - Installing asm89/stack-cors (1.2.0): Downloading (100%)
+  - Installing barryvdh/laravel-cors (v0.11.3): Downloading (100%)
+Writing lock file
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+Discovered Package: barryvdh/laravel-cors
+Discovered Package: beyondcode/laravel-dump-server
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/passport
+Discovered Package: laravel/tinker
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+
+c:\projetos\Laravel\laravel-api-restful>php artisan vendor:publish --provider="Barryvdh\Cors\ServiceProvider"
+Copied File [\vendor\barryvdh\laravel-cors\config\cors.php] To [\config\cors.php]
+Publishing complete.
+
+c:\projetos\Laravel\laravel-api-restful>cd ..
+
+c:\projetos\Laravel>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   laravel-api-restful/.rnd
+        modified:   laravel-api-restful/app/Http/Controllers/ProductController.php
+        modified:   laravel-api-restful/app/Http/Kernel.php
+        modified:   laravel-api-restful/app/Product.php
+        modified:   laravel-api-restful/app/Providers/AuthServiceProvider.php
+        modified:   laravel-api-restful/codigo.txt
+        modified:   laravel-api-restful/composer.json
+        modified:   laravel-api-restful/composer.lock
+        modified:   laravel-api-restful/database/migrations/2019_06_12_231242_create_products_table.php
+        modified:   laravel-api-restful/package.json
+        modified:   laravel-api-restful/public/css/app.css
+        modified:   laravel-api-restful/public/js/app.js
+        modified:   laravel-api-restful/resources/js/app.js
+        modified:   laravel-api-restful/routes/api.php
+        modified:   laravel-api-restful/routes/web.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        laravel-api-restful/app/Http/Controllers/HomeController.php
+        laravel-api-restful/app/Policies/
+        laravel-api-restful/config/cors.php
+        laravel-api-restful/package-lock.json
+        laravel-api-restful/public/mix-manifest.json
+        laravel-api-restful/public/teste.html
+        laravel-api-restful/resources/js/components/passport/
+        laravel-api-restful/resources/views/auth/
+        laravel-api-restful/resources/views/home.blade.php
+        laravel-api-restful/resources/views/layouts/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+c:\projetos\Laravel>git add -A
+warning: LF will be replaced by CRLF in laravel-api-restful/app/Http/Controllers/ProductController.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/app/Http/Kernel.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/app/Product.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/app/Providers/AuthServiceProvider.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/composer.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/composer.lock.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/database/migrations/2019_06_12_231242_create_products_table.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/package.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/public/css/app.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/public/js/app.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/js/app.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/routes/api.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/routes/web.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/app/Http/Controllers/HomeController.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/app/Policies/ProductPolicy.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/config/cors.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/package-lock.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/public/mix-manifest.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/js/components/passport/AuthorizedClients.vue.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/js/components/passport/Clients.vue.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/js/components/passport/PersonalAccessTokens.vue.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/views/auth/login.blade.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/views/auth/passwords/email.blade.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/views/auth/passwords/reset.blade.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/views/auth/register.blade.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/views/auth/verify.blade.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/views/home.blade.php.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in laravel-api-restful/resources/views/layouts/app.blade.php.
+The file will have its original line endings in your working directory
+
+c:\projetos\Laravel>git commit -m "Adicionando conteudo de api restful"
+[master 4c4f943] Adicionando conteudo de api restful
+ 31 files changed, 73750 insertions(+), 18 deletions(-)
+ rewrite laravel-api-restful/.rnd (100%)
+ create mode 100644 laravel-api-restful/app/Http/Controllers/HomeController.php
+ create mode 100644 laravel-api-restful/app/Policies/ProductPolicy.php
+ create mode 100644 laravel-api-restful/config/cors.php
+ create mode 100644 laravel-api-restful/package-lock.json
+ rewrite laravel-api-restful/public/css/app.css (98%)
+ rewrite laravel-api-restful/public/js/app.js (83%)
+ create mode 100644 laravel-api-restful/public/mix-manifest.json
+ create mode 100644 laravel-api-restful/public/teste.html
+ create mode 100644 laravel-api-restful/resources/js/components/passport/AuthorizedClients.vue
+ create mode 100644 laravel-api-restful/resources/js/components/passport/Clients.vue
+ create mode 100644 laravel-api-restful/resources/js/components/passport/PersonalAccessTokens.vue
+ create mode 100644 laravel-api-restful/resources/views/auth/login.blade.php
+ create mode 100644 laravel-api-restful/resources/views/auth/passwords/email.blade.php
+ create mode 100644 laravel-api-restful/resources/views/auth/passwords/reset.blade.php
+ create mode 100644 laravel-api-restful/resources/views/auth/register.blade.php
+ create mode 100644 laravel-api-restful/resources/views/auth/verify.blade.php
+ create mode 100644 laravel-api-restful/resources/views/home.blade.php
+ create mode 100644 laravel-api-restful/resources/views/layouts/app.blade.php
+
+c:\projetos\Laravel>git push origin master
+Enumerating objects: 76, done.
+Counting objects: 100% (76/76), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (44/44), 458.04 KiB | 4.87 MiB/s, done.
+Total 44 (delta 19), reused 0 (delta 0)
+remote: Resolving deltas: 100% (19/19), completed with 18 local objects.
+remote:
+remote: GitHub found 1 vulnerability on nicolasteixeira3856/Laravel's default branch (1 high). To find out more, visit:
+remote:      https://github.com/nicolasteixeira3856/Laravel/network/alerts
+remote:
+To https://github.com/nicolasteixeira3856/Laravel.git
+   6e45dbf..4c4f943  master -> master
+
+c:\projetos\Laravel>
